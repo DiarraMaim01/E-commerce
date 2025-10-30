@@ -31,7 +31,6 @@ if (!is_numeric($prix) || $prix <= 0) {
   exit;
 }
 
-// Upload image (optionnel mais recommandé)
 $imagePath = null;
 if (!empty($_FILES['image']['name'])) {
   $f = $_FILES['image'];

@@ -7,9 +7,24 @@
 </head>
 <body>
     <h1>Bienvenue sur le tableau de bord admin</h1>
-    <a href="/E-commerce/admin/product_create.html">Créer un produit</a>
-    <a href="/E-commerce/admin/product.html"> voir les produits</a>
+    <div style="margin-bottom: 20px;">
+        <a href="/E-commerce/admin/product_create.html">Créer un produit</a>
+    </div>
+    
+    <div id="filter-container">
+        <div id="filtre-section"></div>
+        <input type="text" id="search" placeholder="Rechercher un produit...">
+    </div>
 
-    <!-- ajouter statistisque apres -->
+    <div>
+        <h2>Liste des produits</h2>
+    </div>
+
+    <div id="container">
+         <div id="product-list">
+
+         </div>
+    </div>
+    <script src="/E-commerce/assets/js/products.js"></script>
 </body>
 </html>
