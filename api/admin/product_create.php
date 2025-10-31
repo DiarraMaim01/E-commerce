@@ -68,7 +68,7 @@ if (!empty($_FILES['image']['name'])) {
     exit;
   }
  
-  $imagePath = 'public/products/uploads/'.$name;
+  $imagePath = 'public/uploads/products/'.$name;
 }
 
 // Insertion DB
