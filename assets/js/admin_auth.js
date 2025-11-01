@@ -125,8 +125,44 @@ async function initAdminLogin() {
   });
 }
 
+
+// DECONNEXION -------------------------------------------------
+
+async function logoutAdmin() {
+  if (!confirm('Êtes-vous sûr de vouloir vous déconnecter ?')) {
+    return;
+  }
+
+  try {
+    const res = await fetch('/E-commerce/api/admin/admin_logout.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' }
+    });
+    
+    const data = await res.json();
+    
+    if (data.success) {
+      window.location.href = '/E-commerce/admin/admin_login.html';
+    } else {
+      alert('Erreur lors de la déconnexion');
+    }
+  } catch (error) {
+    console.error('Erreur logout:', error);
+    window.location.href = '/E-commerce/admin/admin_login.html';
+  }
+}
+
+function initLogout() {
+  const logoutBtn = document.getElementById('logout-btn');
+  if (logoutBtn) {
+    logoutBtn.addEventListener('click', logoutAdmin);
+  }
+}
+
+
 // BOOT --------------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
   initAdminRegister();
   initAdminLogin();
+  initLogout();
 });
