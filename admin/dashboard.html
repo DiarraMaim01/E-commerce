@@ -7,28 +7,47 @@
 </head>
 <body>
     <h1>Bienvenue sur le tableau de bord admin</h1>
-    <button id="logout-btn" class="logout-btn">
+    <button id="logout-btn">
         🚪 Déconnexion
     </button>
     <div style="margin-bottom: 20px;">
         <a href="/E-commerce/admin/product_create.html">Créer un produit</a>
     </div>
-    
-    <div id="filter-container">
-        <div id="filtre-section"></div>
-        <input type="text" id="search" placeholder="Rechercher un produit...">
+
+    <div style="display: flex; gap: 0; margin-bottom: 20px; border-bottom: 2px solid #bdc3c7;">
+        <button class="tab-btn active" data-tab="products" style="background: none; border: none; padding: 12px 24px; cursor: pointer; font-size: 1rem; color: #7f8c8d; border-bottom: 2px solid transparent;">
+            📦 Produits
+        </button>
+        <button class="tab-btn" data-tab="orders" style="background: none; border: none; padding: 12px 24px; cursor: pointer; font-size: 1rem; color: #7f8c8d; border-bottom: 2px solid transparent;">
+            📋 Commandes
+        </button>
     </div>
 
-    <div>
-        <h2>Liste des produits</h2>
+    <!-- Onglet Produits -->
+    <div id="products-tab" class="tab-content active">
+        <div id="filter-container">
+            <input type="text" id="search" placeholder="Rechercher un produit...">
+        </div>
+
+        <div>
+            <h2>Liste des produits</h2>
+        </div>
+
+        <div id="container">
+            <div id="product-list"></div>
+        </div>
     </div>
 
-    <div id="container">
-         <div id="product-list">
-
-         </div>
+    <!-- Onglet Commandes -->
+    <div id="orders-tab" class="tab-content">
+        <div>
+            <h2>Liste des commandes</h2>
+            <div id="orders-list"></div>
+        </div>
     </div>
-     <script src="/E-commerce/assets/js/admin_auth.js"></script>
+
+    <script src="/E-commerce/assets/js/admin_auth.js"></script>
     <script src="/E-commerce/assets/js/products.js"></script>
+    <script src="/E-commerce/assets/js/admin_orders.js"></script>
 </body>
 </html>
