@@ -111,3 +111,7 @@ document.getElementById('clear-cart').addEventListener('click', () => {
 
 
 render();
+
+//commande 
+
+
