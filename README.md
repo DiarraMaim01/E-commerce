@@ -1,7 +1,3 @@
-Excellent réflexe 👏 !
-Un bon **README** sur GitHub, c’est la vitrine du projet — aussi important que le code lui-même.
-Voici une version complète, claire et professionnelle du README pour ton **projet Mini E-commerce**, adaptée à ta structure et ton style.
-
 ---
 
 # 🛍️ Mini-Ecommerce — Application web PHP / JavaScript
