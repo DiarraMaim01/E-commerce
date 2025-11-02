@@ -3,29 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon site E-commerce</title>
+    <title>Boutique E-commerce</title>
+    <link rel="stylesheet" href="/E-commerce/assets/css/style.css">
+    <link rel="stylesheet" href="/E-commerce/assets/css/admin.css">
 </head>
 <body>
    <header>
-    <h1>🛍️ Boutique</h1>
-    <a href="/E-commerce/public/cart.html">Panier (<span id="cart-count">0</span>)</a>
-
+    <h1>🛍️ Boutique en ligne</h1>
+    <a href="/E-commerce/public/cart.html" class="nav-link">🛒 Panier (<span id="cart-count">0</span>)</a>
   </header>
 
-    <div id="filter-container" style="margin-top: 20px;">
-        <div id="filtre-section" ></div>
-        <input type="text" id="search" placeholder="Rechercher un produit...">
-    </div>
+  <div class="filter-container">
+    <input type="text" id="search" placeholder="🔍 Rechercher un produit..." class="search-input">
+  </div>
 
-   <main>
-        <h2>Nos Produits</h2>
-
-         <div id="product-list">
-
-         </div>
-    </main>
+  <main class="content-section">
+    <h2>🎯 Nos Produits</h2>
+    <div id="product-list" class="product-grid"></div>
+  </main>
     
-
-    <script src="/E-commerce/assets/js/shop.js"></script>
+  <script src="/E-commerce/assets/js/shop.js"></script>
 </body>
 </html>

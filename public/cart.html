@@ -4,26 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mon Panier</title>
-  <style>
-    .cart-item { display:flex; gap:12px; align-items:center; padding:10px 0; border-bottom:1px solid #eee; }
-    .qty { display:flex; gap:6px; align-items:center; }
-    .qty button { width:28px; height:28px; }
-    .right { margin-left:auto; text-align:right; }
-    .total { font-weight:700; font-size:1.1rem; margin-top:16px; }
-    .empty { color:#777; }
-  </style>
+  <link rel="stylesheet" href="/E-commerce/assets/css/style.css">
+  <link rel="stylesheet" href="/E-commerce/assets/css/admin.css">
 </head>
 <body>
-  <h1>🛒 Votre panier</h1>
-  <a href="/E-commerce/public/index.html">← Continuer mes achats</a>
+  <header>
+    <h1>🛒 Votre panier</h1>
+    <a href="/E-commerce/public/index.html" class="nav-link">← Continuer mes achats</a>
+  </header>
 
-  <div id="cart"></div>
-  <div class="total" id="cart-total"></div>
-  <div style="margin-top:12px;">
-    <button id="clear-cart">Vider le panier</button>
+  <div class="content-section">
+    <div id="cart"></div>
+    <div class="total" id="cart-total"></div>
+    <div style="margin-top:20px;">
+      <button id="clear-cart">Vider le panier</button>
+      <a href="/E-commerce/public/checkout.html" class="nav-link">✅ Commander</a>
+    </div>
   </div>
-
-  <a href="/E-commerce/public/checkout.html">commander</a>
 
   <script src="/E-commerce/assets/js/cart.js"></script>
 </body>

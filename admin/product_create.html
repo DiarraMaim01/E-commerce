@@ -4,37 +4,47 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Créer un Produit</title>
-  <link rel="stylesheet" href="/assets/css/products.css">
+  <link rel="stylesheet" href="/E-commerce/assets/css/style.css">
+  <link rel="stylesheet" href="/E-commerce/assets/css/admin.css">
 </head>
 <body>
-  <h1>Créer un Produit</h1>
-
-  <form id="ProductCreate-form" method="POST" enctype="multipart/form-data">
+  <header class="admin-header">
+    <h1>➕ Créer un Produit</h1>
     <div>
-      <label for="titre">Titre :</label>
-      <input type="text" id="titre" name="titre" required>
+        <a href="/E-commerce/admin/dashboard.html" class="nav-link">📊 Dashboard</a>
+        <button id="logout-btn" class="logout-btn">🚪 Déconnexion</button>
     </div>
+  </header>
 
-    <div>
-      <label for="description">Description :</label>
-      <textarea id="description" name="description" required></textarea>
-    </div>
+  <div class="content-section">
+    <form id="ProductCreate-form" method="POST" enctype="multipart/form-data">
+      <div>
+        <label for="titre">Titre :</label>
+        <input type="text" id="titre" name="titre" required>
+      </div>
 
-    <div>
-      <label for="prix">Prix :</label>
-      <input type="number" id="prix" name="prix" step="0.01" min="0" required>
-    </div>
+      <div>
+        <label for="description">Description :</label>
+        <textarea id="description" name="description" required></textarea>
+      </div>
 
-    <div>
-      <label for="image">Image :</label>
-      <input type="file" id="image" name="image" accept="image/png, image/jpeg" required>
-    </div>
+      <div>
+        <label for="prix">Prix :</label>
+        <input type="number" id="prix" name="prix" step="0.01" min="0" required>
+      </div>
 
-    <button type="submit">Créer</button>
-  </form>
+      <div>
+        <label for="image">Image :</label>
+        <input type="file" id="image" name="image" accept="image/png, image/jpeg" required>
+      </div>
 
-  <div id="errors" class="error-messages"></div>
+      <button type="submit">Créer le produit</button>
+    </form>
 
+    <div id="errors" class="error-messages"></div>
+  </div>
+
+  <script src="/E-commerce/assets/js/admin_auth.js"></script>
   <script src="/E-commerce/assets/js/products.js"></script>
 </body>
 </html>

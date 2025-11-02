@@ -4,42 +4,50 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Modifier un Produit</title>
+  <link rel="stylesheet" href="/E-commerce/assets/css/style.css">
+  <link rel="stylesheet" href="/E-commerce/assets/css/admin.css">
 </head>
 <body>
-  <h1>Modifier un Produit</h1>
-  <a href="/E-commerce/admin/dashboard.html">← Retour au dashboard</a>
-  <button id="logout-btn" style="margin-left: 20px;">🚪 Déconnexion</button>
-
-  <form id="ProductEdit-form" method="POST" enctype="multipart/form-data">
-    <input type="hidden" id="product_id" name="product_id">
-    
+  <header class="admin-header">
+    <h1>✏️ Modifier un Produit</h1>
     <div>
-      <label for="titre">Titre :</label>
-      <input type="text" id="titre" name="titre" required>
+        <a href="/E-commerce/admin/dashboard.html" class="nav-link">📊 Dashboard</a>
+        <button id="logout-btn" class="logout-btn">🚪 Déconnexion</button>
     </div>
+  </header>
 
-    <div>
-      <label for="description">Description :</label>
-      <textarea id="description" name="description" required></textarea>
-    </div>
+  <div class="content-section">
+    <form id="ProductEdit-form" method="POST" enctype="multipart/form-data">
+      <input type="hidden" id="product_id" name="product_id">
+      
+      <div>
+        <label for="titre">Titre :</label>
+        <input type="text" id="titre" name="titre" required>
+      </div>
 
-    <div>
-      <label for="prix">Prix :</label>
-      <input type="number" id="prix" name="prix" step="0.01" min="0" required>
-    </div>
+      <div>
+        <label for="description">Description :</label>
+        <textarea id="description" name="description" required></textarea>
+      </div>
 
-    <div>
-      <label for="image">Image :</label>
-      <input type="file" id="image" name="image" accept="image/png, image/jpeg">
-      <small>Laisser vide pour conserver l'image actuelle</small>
-    </div>
+      <div>
+        <label for="prix">Prix :</label>
+        <input type="number" id="prix" name="prix" step="0.01" min="0" required>
+      </div>
 
-    <div id="current-image" style="margin: 10px 0;"></div>
+      <div>
+        <label for="image">Image :</label>
+        <input type="file" id="image" name="image" accept="image/png, image/jpeg">
+        <small style="color: #666;">Laisser vide pour conserver l'image actuelle</small>
+      </div>
 
-    <button type="submit">💾 Modifier le produit</button>
-  </form>
+      <div id="current-image" style="margin: 10px 0;"></div>
 
-  <div id="errors"></div>
+      <button type="submit">💾 Modifier le produit</button>
+    </form>
+
+    <div id="errors" class="error-messages"></div>
+  </div>
 
   <script src="/E-commerce/assets/js/admin_auth.js"></script>
   <script src="/E-commerce/assets/js/product_edit.js"></script>

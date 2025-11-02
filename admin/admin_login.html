@@ -1,23 +1,32 @@
+<!-- Les deux fichiers sont similaires -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login</title>
+    <link rel="stylesheet" href="/E-commerce/assets/css/style.css">
+    <link rel="stylesheet" href="/E-commerce/assets/css/admin.css">
 </head>
 <body>
-    <h1>Connexion Admin</h1>
-    <form id="AdminLogin-form">
-        <div>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-        <div>
-            <label for="password">Mot de passe:</label>
-            <input type="password" id="password" name="password" required>
-        </div>
-        <button type="submit">Se connecter</button>
-    </form>
+    <header class="admin-header">
+        <h1>🔐 Connexion Admin</h1>
+        <a href="/E-commerce/admin/admin_register.html" class="nav-link">📝 S'inscrire</a>
+    </header>
+
+    <div class="content-section">
+        <form id="AdminLogin-form">
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="password">Mot de passe:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Se connecter</button>
+        </form>
+    </div>
    
     <script src="/E-commerce/assets/js/admin_auth.js"></script>
 </body>
